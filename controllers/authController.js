@@ -50,7 +50,15 @@ exports.loginWithPassword = async (req, res) => {
       where: { email: email.toLowerCase().trim() } 
     });
 
-    if (!user || !(await user.comparePassword(password))) {
+    if (!user) {
+      return res.status(401).json({ 
+        error: 'Invalid credentials',
+        message: 'Invalid email or password'
+      });
+    }
+
+    const isPasswordValid = await user.comparePassword(password);
+    if (!isPasswordValid) {
       // Increment login attempts
       user.login_attempts = (user.login_attempts || 0) + 1;
       if (user.login_attempts >= 5) {
