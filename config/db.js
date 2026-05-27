@@ -13,13 +13,37 @@ if (!process.env.GOOGLE_CLIENT_ID) process.env.GOOGLE_CLIENT_ID = '602850848367-
 if (!process.env.FRONTEND_URL) process.env.FRONTEND_URL = 'http://localhost:5173';
 
 
+// Prefer a full connection URL if provided (Railway provides MYSQL_PUBLIC_URL or MYSQL_URL)
+let dbName = process.env.DB_NAME || process.env.MYSQLDATABASE || 'pp_db';
+let dbUser = process.env.DB_USER || process.env.MYSQLUSER || 'root';
+let dbPassword = process.env.DB_PASSWORD !== undefined ? process.env.DB_PASSWORD : (process.env.MYSQLPASSWORD || 'aemqpvGbdlNCLcEEaHcQvcuxcIrnMbaE');
+let dbHost = process.env.DB_HOST || process.env.MYSQLHOST || 'junction.proxy.rlwy.net';
+let dbPort = process.env.DB_PORT || process.env.MYSQLPORT || 46619;
+
+const connUrl = process.env.MYSQL_PUBLIC_URL || process.env.MYSQL_URL || process.env.DATABASE_URL;
+if (connUrl) {
+  try {
+    const parsed = new URL(connUrl);
+    if (parsed.protocol && parsed.protocol.startsWith('mysql')) {
+      dbHost = parsed.hostname || dbHost;
+      dbPort = parsed.port ? parseInt(parsed.port) : dbPort;
+      dbUser = parsed.username || dbUser;
+      dbPassword = parsed.password || dbPassword;
+      const pathname = parsed.pathname || '';
+      if (pathname && pathname.length > 1) dbName = pathname.replace(/^\//, '');
+    }
+  } catch (e) {
+    console.warn('Failed to parse MYSQL URL - falling back to individual env vars');
+  }
+}
+
 const sequelize = new Sequelize(
-  process.env.DB_NAME || process.env.MYSQLDATABASE || 'pp_db',
-  process.env.DB_USER || process.env.MYSQLUSER || 'root',
-  process.env.DB_PASSWORD !== undefined ? process.env.DB_PASSWORD : (process.env.MYSQLPASSWORD || 'aemqpvGbdlNCLcEEaHcQvcuxcIrnMbaE'),
+  dbName,
+  dbUser,
+  dbPassword,
   {
-    host: process.env.DB_HOST || process.env.MYSQLHOST || 'junction.proxy.rlwy.net',
-    port: process.env.DB_PORT || process.env.MYSQLPORT || 46619,
+    host: dbHost,
+    port: dbPort,
     dialect: process.env.DB_DIALECT || 'mysql',
     logging: false,
   }
