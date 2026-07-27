@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, Clock, MapPin, Settings, BarChart3, ChevronRight, Activity } from 'lucide-react';
 
@@ -129,3 +129,4 @@ const ActiveRFQs = () => {
 };
 
 export default ActiveRFQs;
+

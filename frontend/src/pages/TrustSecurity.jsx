@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { ShieldCheck, Lock, Eye, Database, Globe, CheckCircle2, AlertCircle } from 'lucide-react';
 
@@ -112,3 +112,4 @@ const TrustSecurity = () => {
 };
 
 export default TrustSecurity;
+

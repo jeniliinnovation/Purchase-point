@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import {
   ArrowLeft, DollarSign, Clock, FileText, ShieldCheck,
@@ -37,7 +37,7 @@ const BidDetailView = ({ bid, onBack }) => {
               {bid.RFQ?.title || 'Bid Detail'}
             </h1>
             <p className="text-[11px] font-bold text-gray-400 uppercase tracking-widest mt-0.5">
-              Ref: {bid.RFQ?.rfq_number || `RFQ-${bid.RFQId}`} • Submitted: {new Date(bid.createdAt).toLocaleDateString()}
+              Ref: {bid.RFQ?.rfq_number || `RFQ-${bid.RFQId}`} â€¢ Submitted: {new Date(bid.createdAt).toLocaleDateString()}
             </p>
           </div>
         </div>
@@ -107,7 +107,7 @@ const BidDetailView = ({ bid, onBack }) => {
           )}
         </div>
 
-        {/* Right — Status Timeline */}
+        {/* Right â€” Status Timeline */}
         <div className="space-y-6">
           <div className="bg-white p-8 rounded-[2.5rem] border border-gray-100 shadow-sm">
             <h3 className="text-sm font-black text-upwork-dark uppercase tracking-widest mb-6 flex items-center gap-2">
@@ -168,3 +168,4 @@ const BidDetailView = ({ bid, onBack }) => {
 };
 
 export default BidDetailView;
+

@@ -37,7 +37,7 @@ const Profile = () => {
           return;
         }
 
-        const response = await fetch('https://purchase-point.jenili.in/api/user/profile', {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/user/profile`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -521,4 +521,5 @@ const Profile = () => {
 };
 
 export default Profile;
+
 

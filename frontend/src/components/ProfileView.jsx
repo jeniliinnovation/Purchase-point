@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { User, Mail, Shield, Calendar, Building, Edit2 } from 'lucide-react';
 
 const ProfileView = () => {
@@ -140,3 +140,4 @@ const ProfileView = () => {
 };
 
 export default ProfileView;
+

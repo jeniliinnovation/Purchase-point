@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   LayoutDashboard,
@@ -137,8 +137,8 @@ const SellerSidebar = ({ activeTab, setActiveTab, isOpen, setIsOpen }) => {
             <p className="text-[11px] font-black text-gray-900 uppercase tracking-tight truncate">{user?.name || 'Supplier'}</p>
             <p className="text-[9px] font-bold uppercase tracking-widest mt-0.5">
               {user?.status === 'active' 
-                ? <span className="text-[#14a800]">● Verified</span>
-                : <span className="text-orange-400">● Pending</span>
+                ? <span className="text-[#14a800]">â— Verified</span>
+                : <span className="text-orange-400">â— Pending</span>
               }
             </p>
           </div>
@@ -173,3 +173,4 @@ const SellerSidebar = ({ activeTab, setActiveTab, isOpen, setIsOpen }) => {
 };
 
 export default SellerSidebar;
+

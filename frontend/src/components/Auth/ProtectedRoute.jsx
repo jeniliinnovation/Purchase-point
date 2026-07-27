@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 
 const ProtectedRoute = ({ children, allowedRoles }) => {
@@ -6,7 +6,7 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
   const userString = localStorage.getItem('user');
   const location = useLocation();
 
-  // No session at all → redirect to login
+  // No session at all â†’ redirect to login
   if (!token || !userString) {
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
@@ -22,7 +22,7 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
 
     return children;
   } catch (error) {
-    // Corrupted localStorage — clean up and send to login
+    // Corrupted localStorage â€” clean up and send to login
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     return <Navigate to="/login" replace />;
@@ -30,3 +30,4 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
 };
 
 export default ProtectedRoute;
+

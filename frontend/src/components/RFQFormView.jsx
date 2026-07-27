@@ -60,7 +60,7 @@ const RFQFormView = ({ onSaveSuccess }) => {
         description: formData.description,
       };
 
-      const response = await fetch(`https://purchase-point.jenili.in/api/${role}/rfq`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/${role}/rfq`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -165,4 +165,5 @@ const RFQFormView = ({ onSaveSuccess }) => {
 };
 
 export default RFQFormView;
+
 

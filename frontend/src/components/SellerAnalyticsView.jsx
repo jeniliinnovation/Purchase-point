@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   AreaChart, Area, BarChart, Bar, PieChart, Pie, Cell,
@@ -287,7 +287,7 @@ const SellerAnalyticsView = () => {
                 </div>
                 {item.positive !== null && (
                   <span className={`text-[10px] font-black uppercase px-2 py-1 rounded-lg ${item.positive ? 'bg-upwork-green/20 text-upwork-green' : 'bg-red-900/30 text-red-400'}`}>
-                    {item.positive ? '▲ Optimal' : '▼ Sub-optimal'}
+                    {item.positive ? 'â–² Optimal' : 'â–¼ Sub-optimal'}
                   </span>
                 )}
               </div>
@@ -300,3 +300,4 @@ const SellerAnalyticsView = () => {
 };
 
 export default SellerAnalyticsView;
+

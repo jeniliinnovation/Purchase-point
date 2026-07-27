@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Trophy, Calendar, DollarSign, Package, Loader2, ArrowRight } from 'lucide-react';
 
@@ -99,3 +99,4 @@ const BuyerAwardsView = () => {
 };
 
 export default BuyerAwardsView;
+

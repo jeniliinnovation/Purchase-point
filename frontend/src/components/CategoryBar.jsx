@@ -1,11 +1,11 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 
 const categories = [
   { 
     name: 'Electronics & PCB', 
     description: 'Connectors, Microcontrollers, and PCB Fabrication',
-    icon: '📱', 
+    icon: 'ðŸ“±', 
     count: '12 Active RFQs',
     trend: '+5% last week',
     color: 'bg-blue-50'
@@ -13,7 +13,7 @@ const categories = [
   { 
     name: 'Mechanical Parts', 
     description: 'CNC Machining, Injection Molding, and Casting',
-    icon: '⚙️', 
+    icon: 'âš™ï¸', 
     count: '24 Active RFQs',
     trend: '+12% last week',
     color: 'bg-orange-50'
@@ -21,7 +21,7 @@ const categories = [
   { 
     name: 'Raw Materials', 
     description: 'Steel, Aluminum, and Specialized Composites',
-    icon: '🪵', 
+    icon: 'ðŸªµ', 
     count: '8 Active RFQs',
     trend: 'Steady',
     color: 'bg-amber-50'
@@ -29,7 +29,7 @@ const categories = [
   { 
     name: 'Logistics Services', 
     description: 'Global Freight, Warehousing, and Last-mile',
-    icon: '🚛', 
+    icon: 'ðŸš›', 
     count: '15 Active RFQs',
     trend: '+8% last week',
     color: 'bg-green-50'
@@ -37,7 +37,7 @@ const categories = [
   { 
     name: 'Direct Sourcing', 
     description: 'High-volume contract manufacturing',
-    icon: '🏗️', 
+    icon: 'ðŸ—ï¸', 
     count: '6 Active RFQs',
     trend: 'High Priority',
     color: 'bg-purple-50'
@@ -45,7 +45,7 @@ const categories = [
   { 
     name: 'Procurement Consulting', 
     description: 'Strategic sourcing & vendor audit services',
-    icon: '🤝', 
+    icon: 'ðŸ¤', 
     count: '4 Active RFQs',
     trend: 'New',
     color: 'bg-emerald-50'
@@ -89,7 +89,7 @@ const CategoryBar = () => {
             <p className="text-xl text-upwork-gray font-medium">Explore active bidding rounds across global industrial sectors. Join top-tier suppliers today.</p>
           </div>
           <button className="text-upwork-green font-bold text-lg hover:underline flex items-center group transition-all">
-             Browse all sectors <span className="ml-2 group-hover:translate-x-2 transition-transform">→</span>
+             Browse all sectors <span className="ml-2 group-hover:translate-x-2 transition-transform">â†’</span>
           </button>
         </div>
 
@@ -135,3 +135,4 @@ const CategoryBar = () => {
 };
 
 export default CategoryBar;
+

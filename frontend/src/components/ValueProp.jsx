@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 
 const ValueProp = () => {
@@ -12,21 +12,21 @@ const ValueProp = () => {
           <h2 className="text-4xl lg:text-5xl font-bold mb-12">Procurement Excellence with Purchase Point</h2>
           <div className="space-y-10">
             <div className="flex items-start gap-4">
-              <div className="mt-1 text-upwork-green font-bold text-2xl">✓</div>
+              <div className="mt-1 text-upwork-green font-bold text-2xl">âœ“</div>
               <div>
                 <h3 className="text-xl font-bold mb-2">Automated RFQ Tracking</h3>
                 <p className="text-gray-400 text-lg">Centralize all your sourcing requests. Monitor deadlines, supplier participation, and bid status in real-time.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <div className="mt-1 text-upwork-green font-bold text-2xl">✓</div>
+              <div className="mt-1 text-upwork-green font-bold text-2xl">âœ“</div>
               <div>
                 <h3 className="text-xl font-bold mb-2">Deep-Dive Analysis</h3>
                 <p className="text-gray-400 text-lg">Detailed part and BOM level analysis. Compare unit prices, NRE costs, and calculate variance automatically.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <div className="mt-1 text-upwork-green font-bold text-2xl">✓</div>
+              <div className="mt-1 text-upwork-green font-bold text-2xl">âœ“</div>
               <div>
                 <h3 className="text-xl font-bold mb-2">Best-Price Selection</h3>
                 <p className="text-gray-400 text-lg">Algorithmically identify the best suppliers. Maximize savings with rank-based supplier comparisons.</p>
@@ -59,3 +59,4 @@ const ValueProp = () => {
 };
 
 export default ValueProp;
+

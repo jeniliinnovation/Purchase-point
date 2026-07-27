@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Activity, Clock, FileText, Package, CheckCircle, ArrowRight, Loader2 } from 'lucide-react';
 
@@ -95,3 +95,4 @@ const BuyerEventsView = () => {
 };
 
 export default BuyerEventsView;
+

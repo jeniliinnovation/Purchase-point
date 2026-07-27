@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Zap, Building2, Globe, ShieldCheck, BarChart4 } from 'lucide-react';
 
@@ -105,3 +105,4 @@ const Pricing = () => {
 };
 
 export default Pricing;
+

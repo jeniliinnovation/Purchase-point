@@ -1,10 +1,10 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 
 const roles = [
   {
     id: 'buyer',
-    emoji: '🏢',
+    emoji: 'ðŸ¢',
     title: 'I am a Buyer',
     desc: 'Source industrial parts, manage RFQs, and track procurement savings.',
     accent: 'hover:border-upwork-green hover:bg-upwork-green/5',
@@ -12,7 +12,7 @@ const roles = [
   },
   {
     id: 'seller',
-    emoji: '🛠️',
+    emoji: 'ðŸ› ï¸',
     title: 'I am a Supplier',
     desc: 'Find industrial projects, submit competitive bids, and grow your network.',
     accent: 'hover:border-blue-500 hover:bg-blue-50',
@@ -20,7 +20,7 @@ const roles = [
   },
   {
     id: 'admin',
-    emoji: '🛡️',
+    emoji: 'ðŸ›¡ï¸',
     title: 'System Administrator',
     desc: 'Full access to registry nodes, analytics, and infrastructure oversight.',
     accent: 'hover:border-upwork-dark hover:bg-black/5',
@@ -57,7 +57,7 @@ const RoleSelector = ({ onSelect }) => {
             <p className="text-xs font-medium text-gray-500 leading-relaxed">{r.desc}</p>
           </div>
           <div className="flex-shrink-0 w-8 h-8 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-300 group-hover:border-current group-hover:text-current transition-all text-lg">
-            →
+            â†’
           </div>
         </motion.button>
       ))}
@@ -66,3 +66,4 @@ const RoleSelector = ({ onSelect }) => {
 };
 
 export default RoleSelector;
+

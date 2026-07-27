@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { GoogleLogin } from '@react-oauth/google';
@@ -146,7 +146,7 @@ const Login = () => {
                      }}
                      className="text-[9px] font-black text-gray-300 uppercase tracking-[0.3em] hover:text-upwork-green transition-colors"
                    >
-                     ⚡ Dev Fast-Track: Emergency Admin Access
+                     âš¡ Dev Fast-Track: Emergency Admin Access
                    </button>
                 </div>
               </div>
@@ -245,3 +245,4 @@ const Login = () => {
 };
 
 export default Login;
+

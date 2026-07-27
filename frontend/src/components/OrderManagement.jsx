@@ -22,7 +22,7 @@ const OrderManagement = () => {
     const fetchOrders = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('https://purchase-point.jenili.in/api/admin/orders', {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/admin/orders`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -69,7 +69,7 @@ const OrderManagement = () => {
   const handleStatusUpdate = async (id, newStatus) => {
     try {
       const token = localStorage.getItem('token');
-      await fetch(`https://purchase-point.jenili.in/api/admin/order/${id}`, {
+      await fetch(`${import.meta.env.VITE_API_URL}/admin/order/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ const OrderManagement = () => {
     if (!window.confirm('Are you sure you want to terminate this transaction node?')) return;
     try {
       const token = localStorage.getItem('token');
-      await fetch(`https://purchase-point.jenili.in/api/admin/order/${id}`, {
+      await fetch(`${import.meta.env.VITE_API_URL}/admin/order/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -204,4 +204,5 @@ const OrderManagement = () => {
 };
 
 export default OrderManagement;
+
 

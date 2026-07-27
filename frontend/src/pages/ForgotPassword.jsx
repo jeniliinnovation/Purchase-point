@@ -21,7 +21,7 @@ const ForgotPassword = () => {
     setLoading(true);
     setErrorMsg('');
     try {
-      const res = await fetch('https://purchase-point.jenili.in/api/auth/forgot-password', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/auth/forgot-password`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: formData.email })
@@ -41,7 +41,7 @@ const ForgotPassword = () => {
     setLoading(true);
     setErrorMsg('');
     try {
-      const res = await fetch('https://purchase-point.jenili.in/api/auth/verify-reset-otp', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/auth/verify-reset-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: formData.email, otp: formData.otp })
@@ -65,7 +65,7 @@ const ForgotPassword = () => {
     setLoading(true);
     setErrorMsg('');
     try {
-      const res = await fetch('https://purchase-point.jenili.in/api/auth/reset-password', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/auth/reset-password`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
@@ -266,4 +266,5 @@ const ForgotPassword = () => {
 };
 
 export default ForgotPassword;
+
 

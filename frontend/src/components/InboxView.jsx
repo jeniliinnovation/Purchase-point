@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Mail, User, Clock, Trash2, Shield, Inbox as InboxIcon } from 'lucide-react';
 
@@ -146,3 +146,4 @@ const InboxView = () => {
 };
 
 export default InboxView;
+

@@ -389,7 +389,7 @@ const Register = () => {
 
       if (stepId === 2) {
         if (!currentUserId) {
-          const registerRes = await fetch('https://purchase-point.jenili.in/api/auth/register', {
+          const registerRes = await fetch(`${import.meta.env.VITE_API_URL}/auth/register`, {
             method: 'POST', headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: formData.email, password: formData.password, confirm_password: formData.confirm_password })
           });
@@ -788,5 +788,7 @@ const Register = () => {
 };
 
 export default Register;
+
+
 
 

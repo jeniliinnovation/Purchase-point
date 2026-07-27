@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 
 const DashboardPreview = () => {
@@ -35,3 +35,4 @@ const DashboardPreview = () => {
 };
 
 export default DashboardPreview;
+

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Search, Bell, Mail, ChevronDown, Menu } from 'lucide-react';
 
 const AdminTopbar = ({ setActiveTab, toggleSidebar }) => {
@@ -76,3 +76,4 @@ const AdminTopbar = ({ setActiveTab, toggleSidebar }) => {
 };
 
 export default AdminTopbar;
+

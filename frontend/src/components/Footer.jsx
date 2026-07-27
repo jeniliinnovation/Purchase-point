@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Mail, 
@@ -117,7 +117,7 @@ const Footer = () => {
             <div className="hidden sm:block h-4 w-px bg-white/10" />
             <div className="flex items-center gap-2">
               <Globe size={14} />
-              <span className="text-[10px] font-black uppercase tracking-widest">Global Registry © 2026</span>
+              <span className="text-[10px] font-black uppercase tracking-widest">Global Registry Â© 2026</span>
             </div>
           </div>
         </div>
@@ -127,3 +127,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

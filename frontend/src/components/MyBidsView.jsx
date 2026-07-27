@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, Clock, XCircle, DollarSign, Loader2, Calendar, ChevronRight } from 'lucide-react';
 import BidDetailView from './BidDetailView';
@@ -112,3 +112,4 @@ const MyBidsView = () => {
 };
 
 export default MyBidsView;
+

@@ -20,7 +20,7 @@ const CatalogView = () => {
     if (!window.confirm('Confirm product decommissioning from global registry?')) return;
     try {
       const token = localStorage.getItem('token');
-      await fetch(`https://purchase-point.jenili.in/api/admin/product/${id}`, {
+      await fetch(`${import.meta.env.VITE_API_URL}/admin/product/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -36,8 +36,8 @@ const CatalogView = () => {
     const fetchProducts = async () => {
       try {
         const url = searchQuery 
-          ? `https://purchase-point.jenili.in/api/products?search=${encodeURIComponent(searchQuery)}`
-          : 'https://purchase-point.jenili.in/api/products';
+          ? `${import.meta.env.VITE_API_URL}/products?search=${encodeURIComponent(searchQuery)}`
+          : `${import.meta.env.VITE_API_URL}/products`;
         
         const response = await fetch(url);
         if (!response.ok) throw new Error('Failed to fetch catalog');
@@ -60,7 +60,7 @@ const CatalogView = () => {
     setIsSubmitting(true);
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('https://purchase-point.jenili.in/api/products', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/products`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -295,4 +295,5 @@ const CatalogView = () => {
 };
 
 export default CatalogView;
+
 

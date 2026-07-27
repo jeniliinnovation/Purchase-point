@@ -23,7 +23,7 @@ const RFQManagement = () => {
   const handleStatusUpdate = async (id, newStatus) => {
     try {
       const token = localStorage.getItem('token');
-      await fetch(`https://purchase-point.jenili.in/api/admin/rfq/${id}`, {
+      await fetch(`${import.meta.env.VITE_API_URL}/admin/rfq/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const RFQManagement = () => {
     if (!window.confirm('Are you sure you want to decommission this RFQ block?')) return;
     try {
       const token = localStorage.getItem('token');
-      await fetch(`https://purchase-point.jenili.in/api/admin/rfq/${id}`, {
+      await fetch(`${import.meta.env.VITE_API_URL}/admin/rfq/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -60,7 +60,7 @@ const RFQManagement = () => {
         const token = localStorage.getItem('token');
         const user = JSON.parse(localStorage.getItem('user') || '{}');
         const role = user.role || 'admin';
-        const response = await fetch(`https://purchase-point.jenili.in/api/${role}/rfqs`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/${role}/rfqs`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -212,4 +212,5 @@ const RFQManagement = () => {
 };
 
 export default RFQManagement;
+
 

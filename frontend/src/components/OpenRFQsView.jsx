@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FileText, Tag, Calendar, Loader2, Send, CheckCircle } from 'lucide-react';
 
@@ -115,3 +115,4 @@ const OpenRFQsView = ({ setActiveTab, setSelectedRFQ }) => {
 };
 
 export default OpenRFQsView;
+

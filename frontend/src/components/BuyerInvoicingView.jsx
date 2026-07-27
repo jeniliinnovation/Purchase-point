@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FileText, Download, CheckCircle, Clock, DollarSign, Loader2, ArrowRight, Printer, Trash2 } from 'lucide-react';
 import SingleInvoiceView from './SingleInvoiceView';
@@ -159,3 +159,4 @@ const BuyerInvoicingView = () => {
 };
 
 export default BuyerInvoicingView;
+

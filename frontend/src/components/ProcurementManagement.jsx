@@ -9,7 +9,7 @@ const ProcurementManagement = () => {
 
   const fetchQuotations = async () => {
     try {
-      const response = await fetch('https://purchase-point.jenili.in/api/admin/quotations', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/admin/quotations`, {
         headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
       });
       const data = await response.json();
@@ -27,7 +27,7 @@ const ProcurementManagement = () => {
 
   const handleStatusUpdate = async (id, newStatus) => {
     try {
-      const response = await fetch(`https://purchase-point.jenili.in/api/admin/quotation/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/admin/quotation/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -189,4 +189,5 @@ const ProcurementManagement = () => {
 };
 
 export default ProcurementManagement;
+
 

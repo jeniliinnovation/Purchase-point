@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
   Activity, Target, CheckCircle, Send, FileText, Loader2, Plus,
@@ -341,3 +341,4 @@ const SellerDashboardHome = ({ setActiveTab }) => {
 };
 
 export default SellerDashboardHome;
+

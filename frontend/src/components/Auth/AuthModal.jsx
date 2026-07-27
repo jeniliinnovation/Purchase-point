@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import RoleSelector from './RoleSelector';
 
@@ -38,7 +38,7 @@ const AuthModal = ({ isOpen, onClose, initialMode = 'login' }) => {
           onClick={onClose}
           className="absolute top-6 right-6 text-upwork-gray hover:text-upwork-dark transition-colors text-2xl font-bold"
         >
-          ✕
+          âœ•
         </button>
 
         <div className="p-10">
@@ -140,3 +140,4 @@ const AuthModal = ({ isOpen, onClose, initialMode = 'login' }) => {
 };
 
 export default AuthModal;
+

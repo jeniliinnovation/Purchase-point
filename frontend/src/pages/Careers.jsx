@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { Briefcase, MapPin, Search, ChevronRight, Zap, Users, Globe } from 'lucide-react';
 
@@ -83,3 +83,4 @@ const Careers = () => {
 };
 
 export default Careers;
+

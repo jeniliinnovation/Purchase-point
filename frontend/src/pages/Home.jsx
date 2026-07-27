@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import Hero from '../components/Hero';
 import CategoryBar from '../components/CategoryBar';
 import ValueProp from '../components/ValueProp';
@@ -20,3 +20,4 @@ const Home = () => {
 };
 
 export default Home;
+

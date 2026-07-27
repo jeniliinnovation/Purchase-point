@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Send, FileText, Tag, Calendar, DollarSign, Clock, CheckCircle, AlertCircle } from 'lucide-react';
 
@@ -98,7 +98,7 @@ const SubmitBidView = ({ prefillRFQ, setActiveTab }) => {
           >
             <option value="">-- Select an RFQ --</option>
             {rfqs.map(rfq => (
-              <option key={rfq.id} value={rfq.id}>{rfq.rfq_number || `PP-RFQ-${rfq.id}`} — {rfq.title}</option>
+              <option key={rfq.id} value={rfq.id}>{rfq.rfq_number || `PP-RFQ-${rfq.id}`} â€” {rfq.title}</option>
             ))}
           </select>
         </div>
@@ -182,3 +182,4 @@ const SubmitBidView = ({ prefillRFQ, setActiveTab }) => {
 };
 
 export default SubmitBidView;
+

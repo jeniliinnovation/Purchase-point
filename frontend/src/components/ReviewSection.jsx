@@ -1,16 +1,16 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 
 const testimonials = [
   {
-    quote: "We discovered CTO-level expertise on the platform—someone who had already served as a startup CTO—willing to contribute to our open-source project. That kind of talent brings tremendous value to us.",
+    quote: "We discovered CTO-level expertise on the platformâ€”someone who had already served as a startup CTOâ€”willing to contribute to our open-source project. That kind of talent brings tremendous value to us.",
     name: "Saswata Basu",
     role: "CEO",
-    company: "Züs",
+    company: "ZÃ¼s",
     avatar: "https://i.pravatar.cc/150?u=saswata"
   },
   {
-    quote: "Upwork isn't just a hiring platform for us—it's a strategic partner. It's helped us fill every technical gap, accelerate our delivery from months to weeks, and even bring on leaders who've become foundational to our business.",
+    quote: "Upwork isn't just a hiring platform for usâ€”it's a strategic partner. It's helped us fill every technical gap, accelerate our delivery from months to weeks, and even bring on leaders who've become foundational to our business.",
     name: "David Wrench",
     role: "Co-Founder and CEO",
     company: "Datajol",
@@ -122,3 +122,4 @@ const ReviewSection = () => {
 };
 
 export default ReviewSection;
+

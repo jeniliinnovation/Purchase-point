@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { ShieldCheck, Star, MapPin, Search, Filter, Cpu, CheckCircle2, ChevronRight, Award } from 'lucide-react';
 
@@ -123,3 +123,4 @@ const Suppliers = () => {
 };
 
 export default Suppliers;
+

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, ArrowRight, Zap, Target, Globe, Milestone } from 'lucide-react';
 
@@ -115,3 +115,4 @@ const WhatsNew = () => {
 };
 
 export default WhatsNew;
+
