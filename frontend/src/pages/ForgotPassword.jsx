@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { Loader2, ArrowLeft, Mail, ShieldCheck, Lock, CheckCircle2 } from 'lucide-react';
@@ -21,7 +21,7 @@ const ForgotPassword = () => {
     setLoading(true);
     setErrorMsg('');
     try {
-      const res = await fetch('https://pp-backend-5mni.onrender.com/api/auth/forgot-password', {
+      const res = await fetch('https://purchase-point.jenili.in/api/auth/forgot-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: formData.email })
@@ -41,7 +41,7 @@ const ForgotPassword = () => {
     setLoading(true);
     setErrorMsg('');
     try {
-      const res = await fetch('https://pp-backend-5mni.onrender.com/api/auth/verify-reset-otp', {
+      const res = await fetch('https://purchase-point.jenili.in/api/auth/verify-reset-otp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: formData.email, otp: formData.otp })
@@ -65,7 +65,7 @@ const ForgotPassword = () => {
     setLoading(true);
     setErrorMsg('');
     try {
-      const res = await fetch('https://pp-backend-5mni.onrender.com/api/auth/reset-password', {
+      const res = await fetch('https://purchase-point.jenili.in/api/auth/reset-password', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
@@ -206,7 +206,7 @@ const ForgotPassword = () => {
                     type="password"
                     required
                     className="w-full px-6 py-4 rounded-2xl bg-upwork-light-gray border-2 border-transparent focus:border-upwork-green outline-none transition-all font-medium"
-                    placeholder="••••••••"
+                    placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
                     value={formData.new_password}
                     onChange={(e) => setFormData({ ...formData, new_password: e.target.value })}
                   />
@@ -218,7 +218,7 @@ const ForgotPassword = () => {
                     type="password"
                     required
                     className="w-full px-6 py-4 rounded-2xl bg-upwork-light-gray border-2 border-transparent focus:border-upwork-green outline-none transition-all font-medium"
-                    placeholder="••••••••"
+                    placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
                     value={formData.confirm_password}
                     onChange={(e) => setFormData({ ...formData, confirm_password: e.target.value })}
                   />
@@ -266,3 +266,4 @@ const ForgotPassword = () => {
 };
 
 export default ForgotPassword;
+

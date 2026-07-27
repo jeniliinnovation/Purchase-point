@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, ShoppingCart, Calendar, CheckCircle, XCircle, MoreVertical, DollarSign, Loader2, FileText, User } from 'lucide-react';
 
@@ -9,7 +9,7 @@ const ProcurementManagement = () => {
 
   const fetchQuotations = async () => {
     try {
-      const response = await fetch('https://pp-backend-5mni.onrender.com/api/admin/quotations', {
+      const response = await fetch('https://purchase-point.jenili.in/api/admin/quotations', {
         headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
       });
       const data = await response.json();
@@ -27,7 +27,7 @@ const ProcurementManagement = () => {
 
   const handleStatusUpdate = async (id, newStatus) => {
     try {
-      const response = await fetch(`https://pp-backend-5mni.onrender.com/api/admin/quotation/${id}`, {
+      const response = await fetch(`https://purchase-point.jenili.in/api/admin/quotation/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -189,3 +189,4 @@ const ProcurementManagement = () => {
 };
 
 export default ProcurementManagement;
+

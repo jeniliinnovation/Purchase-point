@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Search, Filter, MoreHorizontal, ArrowRight, Download, Loader2, Trash2, X } from 'lucide-react';
 import SingleProductView from './SingleProductView';
 
@@ -20,7 +20,7 @@ const CatalogView = () => {
     if (!window.confirm('Confirm product decommissioning from global registry?')) return;
     try {
       const token = localStorage.getItem('token');
-      await fetch(`https://pp-backend-5mni.onrender.com/api/admin/product/${id}`, {
+      await fetch(`https://purchase-point.jenili.in/api/admin/product/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -36,8 +36,8 @@ const CatalogView = () => {
     const fetchProducts = async () => {
       try {
         const url = searchQuery 
-          ? `https://pp-backend-5mni.onrender.com/api/products?search=${encodeURIComponent(searchQuery)}`
-          : 'https://pp-backend-5mni.onrender.com/api/products';
+          ? `https://purchase-point.jenili.in/api/products?search=${encodeURIComponent(searchQuery)}`
+          : 'https://purchase-point.jenili.in/api/products';
         
         const response = await fetch(url);
         if (!response.ok) throw new Error('Failed to fetch catalog');
@@ -60,7 +60,7 @@ const CatalogView = () => {
     setIsSubmitting(true);
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('https://pp-backend-5mni.onrender.com/api/products', {
+      const response = await fetch('https://purchase-point.jenili.in/api/products', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -295,3 +295,4 @@ const CatalogView = () => {
 };
 
 export default CatalogView;
+

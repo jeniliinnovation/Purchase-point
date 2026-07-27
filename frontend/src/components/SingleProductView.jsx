@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
@@ -28,7 +28,7 @@ const SingleProductView = ({ productId, onBack }) => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch(`https://pp-backend-5mni.onrender.com/api/products/${productId}`);
+        const response = await fetch(`https://purchase-point.jenili.in/api/products/${productId}`);
         const data = await response.json();
         setProduct(data);
       } catch (err) {
@@ -210,3 +210,4 @@ const SingleProductView = ({ productId, onBack }) => {
 };
 
 export default SingleProductView;
+

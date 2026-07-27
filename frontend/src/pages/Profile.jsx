@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   User, 
@@ -37,7 +37,7 @@ const Profile = () => {
           return;
         }
 
-        const response = await fetch('https://pp-backend-5mni.onrender.com/api/user/profile', {
+        const response = await fetch('https://purchase-point.jenili.in/api/user/profile', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -48,7 +48,7 @@ const Profile = () => {
         if (response.ok && data.user) {
           setProfile(data.user);
         } else {
-          // API failed — try to build a basic profile from localStorage
+          // API failed â€” try to build a basic profile from localStorage
           const localUser = localStorage.getItem('user');
           if (localUser) {
             const parsed = JSON.parse(localUser);
@@ -65,7 +65,7 @@ const Profile = () => {
           }
         }
       } catch (err) {
-        // Network error — fall back to localStorage completely
+        // Network error â€” fall back to localStorage completely
         const localUser = localStorage.getItem('user');
         if (localUser) {
           const parsed = JSON.parse(localUser);
@@ -138,7 +138,7 @@ const Profile = () => {
       {error && (
         <div className="max-w-[1440px] mx-auto mb-6">
           <div className="flex items-center gap-3 px-6 py-4 bg-amber-50 border border-amber-200 rounded-2xl text-amber-700 text-xs font-bold">
-            <span className="text-amber-500">⚠</span>
+            <span className="text-amber-500">âš </span>
             {error}
           </div>
         </div>
@@ -373,7 +373,7 @@ const Profile = () => {
                                  <p className="text-[9px] font-black text-gray-400 uppercase">System Integrity</p>
                               </div>
                            </div>
-                           <button className="text-[10px] font-black text-upwork-green uppercase tracking-widest hover:text-upwork-dark transition-colors">Launch Diagnostic Hub →</button>
+                           <button className="text-[10px] font-black text-upwork-green uppercase tracking-widest hover:text-upwork-dark transition-colors">Launch Diagnostic Hub â†’</button>
                         </div>
                      </div>
                   </motion.div>
@@ -521,3 +521,4 @@ const Profile = () => {
 };
 
 export default Profile;
+

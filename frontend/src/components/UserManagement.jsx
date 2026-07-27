@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Search, Shield, Check, X, Loader2, UserRound, Mail, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -12,7 +12,7 @@ const UserManagement = () => {
     try {
       const token = localStorage.getItem('token');
       const endpoint = filter === 'pending' ? '/api/admin/pending-users' : '/api/admin/users';
-      const response = await fetch(`https://pp-backend-5mni.onrender.com${endpoint}`, {
+      const response = await fetch(`https://purchase-point.jenili.in${endpoint}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await response.json();
@@ -37,7 +37,7 @@ const UserManagement = () => {
       const method = action === 'delete' ? 'DELETE' : 'PUT';
       const endpoint = action === 'delete' ? `/api/admin/user/${userId}` : `/api/admin/user/${userId}/${action}`;
       
-      const res = await fetch(`https://pp-backend-5mni.onrender.com${endpoint}`, {
+      const res = await fetch(`https://purchase-point.jenili.in${endpoint}`, {
         method: method,
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -198,3 +198,4 @@ const UserManagement = () => {
 };
 
 export default UserManagement;
+

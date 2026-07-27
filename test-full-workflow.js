@@ -2,7 +2,9 @@ const axios = require('axios');
 const db = require('./config/db');
 const { User, OTP, IndustryCode } = db;
 
-const API_URL = 'http://localhost:5000/api';
+require('dotenv').config();
+const PORT = process.env.PORT || 5002;
+const API_URL = `http://localhost:${PORT}/api`;
 
 async function onboardUser(role, suffix) {
   console.log(`\n==========================================`);

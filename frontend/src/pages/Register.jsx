@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { GoogleLogin } from '@react-oauth/google';
@@ -389,7 +389,7 @@ const Register = () => {
 
       if (stepId === 2) {
         if (!currentUserId) {
-          const registerRes = await fetch('https://pp-backend-5mni.onrender.com/api/auth/register', {
+          const registerRes = await fetch('https://purchase-point.jenili.in/api/auth/register', {
             method: 'POST', headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: formData.email, password: formData.password, confirm_password: formData.confirm_password })
           });
@@ -788,4 +788,5 @@ const Register = () => {
 };
 
 export default Register;
+
 

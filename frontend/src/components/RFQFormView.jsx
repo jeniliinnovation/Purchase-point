@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, AlertCircle, Upload, Save, Send } from 'lucide-react';
 
@@ -60,7 +60,7 @@ const RFQFormView = ({ onSaveSuccess }) => {
         description: formData.description,
       };
 
-      const response = await fetch(`https://pp-backend-5mni.onrender.com/api/${role}/rfq`, {
+      const response = await fetch(`https://purchase-point.jenili.in/api/${role}/rfq`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -165,3 +165,4 @@ const RFQFormView = ({ onSaveSuccess }) => {
 };
 
 export default RFQFormView;
+
