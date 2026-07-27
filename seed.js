@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 
 async function seedData() {
   try {
-    console.log('Connecting to Railway for seeding...');
+    console.log('Connecting to database for seeding...');
     await sequelize.authenticate();
     
     // Passwords will be automatically hashed by the User model's beforeCreate hook
