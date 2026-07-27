@@ -6,16 +6,15 @@ async function seedData() {
     console.log('Connecting to Railway for seeding...');
     await sequelize.authenticate();
     
-    // Hash passwords
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash('password123', salt);
+    // Passwords will be automatically hashed by the User model's beforeCreate hook
+    const defaultPassword = 'password123';
 
     console.log('Creating Admin User...');
     const admin = await User.findOrCreate({
       where: { email: 'admin@purchasepoint.com' },
       defaults: {
         name: 'System Admin',
-        password: hashedPassword,
+        password: defaultPassword,
         role: 'admin',
         status: 'active',
         account_status: 'active'
@@ -27,7 +26,7 @@ async function seedData() {
       where: { email: 'buyer@purchasepoint.com' },
       defaults: {
         name: 'John Buyer',
-        password: hashedPassword,
+        password: defaultPassword,
         role: 'buyer',
         status: 'active',
         account_status: 'active'
@@ -39,7 +38,7 @@ async function seedData() {
       where: { email: 'seller@purchasepoint.com' },
       defaults: {
         name: 'Jane Seller',
-        password: hashedPassword,
+        password: defaultPassword,
         role: 'seller',
         status: 'active',
         account_status: 'active'
